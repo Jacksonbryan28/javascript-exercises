@@ -4,24 +4,17 @@ const sumAll = function (numOne, numTwo) {
   let numOneTest = numOne;
   let numTwoTest = numTwo;
 
-//   if(numOne !== 'number' || numTwo !== 'number'){
-//     return "ERROR";
-//   }
-//   else
-   if (
+  if (
     typeof numOneTest === "number" &&
     typeof numTwoTest === "number" &&
     numOne > 0 &&
-    numTwo > 0
+    numTwo > 0 &&
+    Number.isInteger(numOne) &&
+    Number.isInteger(numTwo)
   ) {
     if (numOne < numTwo) {
       for (i = numOne; i <= numTwo; i++) {
         sumOutput += i;
-
-        //Logs to test
-        //   console.log(sumOutput);
-        //   console.log("numOne Value: " + numOne + " numTwo Value: " + numTwo);
-        //   console.log("i Value" + i);
       }
     } else {
       for (i = numTwo; i <= numOne; i++) {
